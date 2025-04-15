@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Benny Development</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="navbar glass">
+    <div class="logo"><img src="assets/img/logo-square.png" alt="Logo"/> <span>Benny<span>Development</span></span></div>
+    <nav>
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="scripts.html">Scripts</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="changelog.html">Changelog</a></li>
+        <li><a href="admin.html">Admin Panel</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="login.html">Mein Konto</a></li>
+        <li>
+          <select id="lang-switcher" onchange="applyLanguage(this.value)">
+            <option value="de">🇩🇪 DE</option>
+            <option value="en">🇬🇧 EN</option>
+            <option value="fr">🇫🇷 FR</option>
+            <option value="es">🇪🇸 ES</option>
+            <option value="tr">🇹🇷 TR</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero container">
+    <h1 data-i18n="title">Willkommen bei Benny Development</h1>
+    <p data-i18n="description">High Quality FiveM Scripts mit einzigartigem Stil.</p>
+    <a href="scripts.html" class="btn" data-i18n="buy">Jetzt kaufen</a>
+  </section>
+  <script src="assets/js/languages.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(145deg, #0d0d0d, #000);
+  color: #e0f7fa;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem 2rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #00ffff;
+}
+.logo img {
+  height: 40px;
+  filter: drop-shadow(0 0 8px #00ffff);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+nav a:hover,
+nav a.active {
+  color: #1f9aff;
+  text-shadow: 0 0 10px #1f9aff;
+}
+
+/* Hero */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: url('../img/bg-glow.jpg') no-repeat center center / cover;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #b2ebf2;
+}
+.btn {
+  background: linear-gradient(145deg, #00ffff, #1f9aff);
+  color: #000;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 12px #00ffff;
+}
+.btn:hover {
+  background: linear-gradient(145deg, #1f9aff, #00ffff);
+  box-shadow: 0 0 25px #1f9aff;
+  color: #fff;
+}
+
+/* Product Grid */
+.shop-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.product-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: 0.3s;
+  color: #fff;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #00ffff;
+}
+.product-card h3 {
+  margin: 0.5rem 0;
+  color: #1f9aff;
+}
+.product-card p {
+  font-size: 0.95rem;
+  color: #a0e1ff;
+}
+.product-card .price {
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #00ffff;
+}
+
+/* Cart Panel */
+#cart-icon {
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #00ffff;
+}
+.cart-panel {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 1rem;
+  box-shadow: -2px 0 20px rgba(0, 255, 255, 0.3);
+  transition: 0.4s ease;
+  z-index: 999;
+}
+.cart-panel.open {
+  right: 0;
+}
+.cart-panel h2 {
+  font-size: 1.5rem;
+  color: #00ffff;
+}
+.cart-panel ul {
+  list-style: none;
+  margin-top: 1rem;
+  padding: 0;
+}
+.cart-panel li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.75rem 0;
+}
+.cart-total {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+select#lang-switcher {
+  background: rgba(0,0,0,0.5);
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
